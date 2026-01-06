@@ -1,0 +1,10 @@
+# Core data manipulation library
+pandas
+# Numerical computing library
+numpy
+# Basic plotting library
+matplotlib
+# Statistical visualization library
+seaborn
+# Interactive dashboard framework
+streamlit
