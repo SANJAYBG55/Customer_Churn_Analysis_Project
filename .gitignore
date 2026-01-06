@@ -1,0 +1,340 @@
+# ============================================================================
+# Data Analytics Project - .gitignore
+# Customer Churn Analysis
+# ============================================================================
+
+# ===========================
+# Data Files (Too Large / Sensitive)
+# ===========================
+# Raw datasets (LARGE FILES - DO NOT COMMIT)
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.json
+data/raw/*.txt
+
+# Processed datasets (LARGE FILES - DO NOT COMMIT)
+data/processed/*.csv
+data/processed/*.xlsx
+data/processed/*.parquet
+data/processed/*.txt
+
+# Database files (LARGE FILES - DO NOT COMMIT)
+data/database/*.db
+data/database/*.sqlite
+data/database/*.sqlite3
+
+# Keep README files in data folders (for documentation)
+!data/raw/README.md
+!data/processed/README.md
+!data/database/README.md
+
+# Reports and outputs (generated files)
+outputs/reports/*.txt
+outputs/reports/*.pdf
+outputs/reports/*.docx
+outputs/reports/*.html
+
+# Visualizations (generated image files)
+outputs/visualizations/*.png
+outputs/visualizations/*.jpg
+outputs/visualizations/*.jpeg
+outputs/visualizations/*.svg
+outputs/visualizations/*.pdf
+outputs/visualizations/*.html
+
+# Keep placeholder files in output folders
+!outputs/reports/.gitkeep
+!outputs/visualizations/.gitkeep
+
+# ===========================
+# Python
+# ===========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if used later)
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ===========================
+# IDEs and Editors
+# ===========================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ===========================
+# Operating System Files
+# ===========================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ===========================
+# Streamlit
+# ===========================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===========================
+# Logs and Temporary Files
+# ===========================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+
+# ===========================
+# Project Specific
+# ===========================
+# Temporary analysis files
+scratch/
+temp/
+tmp/
+test_outputs/
+
+# Large model files (if any)
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pb
+
+# Credentials and secrets
+secrets/
+*.key
+*.pem
+credentials.json
+config.local.py
+.env.local
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ===========================
+# Exception Rules (KEEP THESE FILES)
+# ===========================
+# Keep README files everywhere
+!README.md
+!*/README.md
+!data/raw/README.md
+!data/processed/README.md
+!data/database/README.md
+!outputs/visualizations/README.md
+!outputs/reports/README.md
+!docs/README.md
+
+# Keep all Python scripts (our code!)
+!*.py
+!scripts/*.py
+!dashboard/*.py
+
+# Keep project documentation
+!requirements.txt
+!Customer\ Churn\ Project.md
+!docs/*.md
+
+# Keep setup files
+!setup_test.py
+!create_structure.py
+
+# Keep .gitkeep files to preserve empty folder structure
+!.gitkeep
+!*/.gitkeep
+
+# ===========================
+# End of .gitignore
+# ===========================
