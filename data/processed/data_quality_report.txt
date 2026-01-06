@@ -1,0 +1,259 @@
+================================================================================
+DATA QUALITY REPORT
+================================================================================
+
+Generated: 2026-01-06 21:42:49
+Dataset: data/processed/centralized_churn_data.csv
+
+--------------------------------------------------------------------------------
+SECTION 1: BASIC DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Total Rows: 7,043
+Total Columns: 31
+Memory Usage: 8.96 MB
+
+--------------------------------------------------------------------------------
+SECTION 2: DUPLICATE RECORDS CHECK
+--------------------------------------------------------------------------------
+✅ No duplicate customerIDs
+✅ No completely duplicate rows
+
+--------------------------------------------------------------------------------
+SECTION 3: MISSING VALUES ANALYSIS
+--------------------------------------------------------------------------------
+  LastContactDate: 2102 missing (29.85%)
+
+--------------------------------------------------------------------------------
+SECTION 4: DATA TYPES VALIDATION
+--------------------------------------------------------------------------------
+  object: 23 columns
+  int64: 5 columns
+  float64: 3 columns
+
+Columns by Data Type:
+  Numeric (8): SeniorCitizen, tenure, MonthlyCharges, ZipCode, TotalPayments, TotalPaid, AvgPayment, FailedPayments
+  Object/Text (23): customerID, gender, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, TotalCharges, Churn, RegistrationDate, City, State, CustomerSegment, LastContactDate
+
+--------------------------------------------------------------------------------
+SECTION 5: NUMERIC COLUMNS PROFILING
+--------------------------------------------------------------------------------
+
+Column: SeniorCitizen
+  Min: 0.00, Max: 1.00
+  Mean: 0.16, Median: 0.00, Std: 0.37
+  Outliers (IQR): 1142 (16.21%)
+
+Column: tenure
+  Min: 0.00, Max: 72.00
+  Mean: 32.37, Median: 29.00, Std: 24.56
+  No outliers (IQR)
+
+Column: MonthlyCharges
+  Min: 18.25, Max: 118.75
+  Mean: 64.76, Median: 70.35, Std: 30.09
+  No outliers (IQR)
+
+Column: ZipCode
+  Min: 90000.00, Max: 96199.00
+  Mean: 93070.30, Median: 93034.00, Std: 1787.41
+  No outliers (IQR)
+
+Column: TotalPayments
+  Min: 1.00, Max: 5.00
+  Mean: 3.00, Median: 3.00, Std: 1.41
+  No outliers (IQR)
+
+Column: TotalPaid
+  Min: 20.05, Max: 650.89
+  Mean: 254.40, Median: 246.92, Std: 136.31
+  No outliers (IQR)
+
+Column: AvgPayment
+  Min: 20.05, Max: 149.98
+  Mean: 84.67, Median: 84.60, Std: 25.21
+  Outliers (IQR): 2 (0.03%)
+
+Column: FailedPayments
+  Min: 0.00, Max: 5.00
+  Mean: 0.59, Median: 0.00, Std: 0.76
+  Outliers (IQR): 144 (2.04%)
+
+--------------------------------------------------------------------------------
+SECTION 6: CATEGORICAL COLUMNS PROFILING
+--------------------------------------------------------------------------------
+
+Column: customerID
+  Unique: 7043, Non-Null: 7043
+    3186-AJIEK: 1 (0.01%)
+    7590-VHVEG: 1 (0.01%)
+    5575-GNVDE: 1 (0.01%)
+    8775-CEBBJ: 1 (0.01%)
+    2823-LKABH: 1 (0.01%)
+
+Column: gender
+  Unique: 2, Non-Null: 7043
+    Male: 3555 (50.48%)
+    Female: 3488 (49.52%)
+
+Column: Partner
+  Unique: 2, Non-Null: 7043
+    No: 3641 (51.70%)
+    Yes: 3402 (48.30%)
+
+Column: Dependents
+  Unique: 2, Non-Null: 7043
+    No: 4933 (70.04%)
+    Yes: 2110 (29.96%)
+
+Column: PhoneService
+  Unique: 2, Non-Null: 7043
+    Yes: 6361 (90.32%)
+    No: 682 (9.68%)
+
+Column: MultipleLines
+  Unique: 3, Non-Null: 7043
+    No: 3390 (48.13%)
+    Yes: 2971 (42.18%)
+    No phone service: 682 (9.68%)
+
+Column: InternetService
+  Unique: 3, Non-Null: 7043
+    Fiber optic: 3096 (43.96%)
+    DSL: 2421 (34.37%)
+    No: 1526 (21.67%)
+
+Column: OnlineSecurity
+  Unique: 3, Non-Null: 7043
+    No: 3498 (49.67%)
+    Yes: 2019 (28.67%)
+    No internet service: 1526 (21.67%)
+
+Column: OnlineBackup
+  Unique: 3, Non-Null: 7043
+    No: 3088 (43.84%)
+    Yes: 2429 (34.49%)
+    No internet service: 1526 (21.67%)
+
+Column: DeviceProtection
+  Unique: 3, Non-Null: 7043
+    No: 3095 (43.94%)
+    Yes: 2422 (34.39%)
+    No internet service: 1526 (21.67%)
+
+Column: TechSupport
+  Unique: 3, Non-Null: 7043
+    No: 3473 (49.31%)
+    Yes: 2044 (29.02%)
+    No internet service: 1526 (21.67%)
+
+Column: StreamingTV
+  Unique: 3, Non-Null: 7043
+    No: 2810 (39.90%)
+    Yes: 2707 (38.44%)
+    No internet service: 1526 (21.67%)
+
+Column: StreamingMovies
+  Unique: 3, Non-Null: 7043
+    No: 2785 (39.54%)
+    Yes: 2732 (38.79%)
+    No internet service: 1526 (21.67%)
+
+Column: Contract
+  Unique: 3, Non-Null: 7043
+    Month-to-month: 3875 (55.02%)
+    Two year: 1695 (24.07%)
+    One year: 1473 (20.91%)
+
+Column: PaperlessBilling
+  Unique: 2, Non-Null: 7043
+    Yes: 4171 (59.22%)
+    No: 2872 (40.78%)
+
+Column: PaymentMethod
+  Unique: 4, Non-Null: 7043
+    Electronic check: 2365 (33.58%)
+    Mailed check: 1612 (22.89%)
+    Bank transfer (automatic): 1544 (21.92%)
+    Credit card (automatic): 1522 (21.61%)
+
+Column: TotalCharges
+  Unique: 6531, Non-Null: 7043
+    20.2: 11 (0.16%)
+     : 11 (0.16%)
+    19.75: 9 (0.13%)
+    19.65: 8 (0.11%)
+    19.9: 8 (0.11%)
+
+Column: Churn
+  Unique: 2, Non-Null: 7043
+    No: 5174 (73.46%)
+    Yes: 1869 (26.54%)
+
+Column: RegistrationDate
+  Unique: 2099, Non-Null: 7043
+    2024-12-26: 11 (0.16%)
+    2020-01-10: 11 (0.16%)
+    2025-11-26: 9 (0.13%)
+    2023-05-30: 9 (0.13%)
+    2025-12-26: 9 (0.13%)
+
+Column: City
+  Unique: 10, Non-Null: 7043
+    Sacramento: 745 (10.58%)
+    Oakland: 739 (10.49%)
+    Fresno: 730 (10.36%)
+    San Diego: 723 (10.27%)
+    Anaheim: 710 (10.08%)
+    San Francisco: 694 (9.85%)
+    San Jose: 694 (9.85%)
+    Los Angeles: 684 (9.71%)
+    Santa Clarita: 683 (9.70%)
+    Bakersfield: 641 (9.10%)
+
+Column: State
+  Unique: 1, Non-Null: 7043
+    CA: 7043 (100.00%)
+
+Column: CustomerSegment
+  Unique: 5, Non-Null: 7043
+    New Customer: 1463 (20.77%)
+    Medium Value: 1429 (20.29%)
+    High Value: 1427 (20.26%)
+    At Risk: 1415 (20.09%)
+    Low Value: 1309 (18.59%)
+
+Column: LastContactDate
+  Unique: 90, Non-Null: 4941
+    2025-11-10: 69 (1.40%)
+    2025-10-29: 69 (1.40%)
+    2025-12-03: 68 (1.38%)
+    2025-12-23: 67 (1.36%)
+    2025-11-28: 66 (1.34%)
+
+--------------------------------------------------------------------------------
+SECTION 7: DATE COLUMNS VALIDATION
+--------------------------------------------------------------------------------
+
+Column: RegistrationDate
+  All dates valid
+  Range: 2020-01-08 to 2026-01-06
+
+Column: LastContactDate
+  All dates valid
+  Range: 2025-10-08 to 2026-01-05
+
+--------------------------------------------------------------------------------
+SECTION 8: KEY RELATIONSHIPS VALIDATION
+--------------------------------------------------------------------------------
+Total Rows: 7,043
+Unique customerIDs: 7,043
+✅ Primary Key Integrity: PASS
+
+--------------------------------------------------------------------------------
+SECTION 9: DATA QUALITY SUMMARY
+--------------------------------------------------------------------------------
+Total Cells: 218,333
+Complete: 216,231, Missing: 2,102
+Completeness: 99.04%
+
+Overall Quality: EXCELLENT

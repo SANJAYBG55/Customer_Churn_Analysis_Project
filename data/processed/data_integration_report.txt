@@ -1,0 +1,41 @@
+======================================================================
+DATA INTEGRATION REPORT
+======================================================================
+
+Report Generated: 2026-01-06 21:29:11
+
+DATA SOURCES:
+1. Kaggle CSV: data/raw/telco_churn.csv
+   Rows: 7043, Columns: 21
+2. Database: data/database/churn_analysis.db
+   - customers_detail: 7043 rows
+   - payments_history: 21125 rows
+   - service_catalog: 9 rows
+
+INTEGRATION STEPS:
+1. Loaded Kaggle CSV dataset
+2. Loaded database tables using SQL queries
+3. Aggregated payment history per customer
+4. Merged datasets using customerID as join key
+5. Validated data integrity (row counts, duplicates)
+
+FINAL DATASET:
+Output File: data/processed/centralized_churn_data.csv
+Total Rows: 7043
+Total Columns: 31
+
+NEW COLUMNS ADDED:
+- RegistrationDate (from customers_detail)
+- City (from customers_detail)
+- State (from customers_detail)
+- ZipCode (from customers_detail)
+- CustomerSegment (from customers_detail)
+- LastContactDate (from customers_detail)
+- TotalPayments (aggregated from payments_history)
+- TotalPaid (aggregated from payments_history)
+- AvgPayment (aggregated from payments_history)
+- FailedPayments (aggregated from payments_history)
+
+======================================================================
+INTEGRATION COMPLETE
+======================================================================

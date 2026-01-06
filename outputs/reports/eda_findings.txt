@@ -1,0 +1,111 @@
+================================================================================
+EXPLORATORY DATA ANALYSIS - KEY FINDINGS
+================================================================================
+
+Analysis Date: 2026-01-06 23:11:53
+Dataset: data/processed/clean_churn_data.csv
+Total Customers: 7,043
+
+--------------------------------------------------------------------------------
+PART 1: DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Numeric Features: 9
+
+--------------------------------------------------------------------------------
+PART 2: CHURN ANALYSIS
+--------------------------------------------------------------------------------
+Overall Churn Rate: 26.54%
+  Churned: 1,869 customers
+  Retained: 5,174 customers
+
+--------------------------------------------------------------------------------
+PART 3: KEY NUMERIC VARIABLE DISTRIBUTIONS
+--------------------------------------------------------------------------------
+
+Tenure (Customer Lifetime):
+  Average: 32.4 months
+  Median: 29.0 months
+  Range: 0-72 months
+
+Monthly Charges:
+  Average: $64.76
+  Median: $70.35
+
+Total Charges:
+  Average: $2279.73
+  Median: $1394.55
+
+--------------------------------------------------------------------------------
+PART 4: CHURN DRIVERS ANALYSIS
+--------------------------------------------------------------------------------
+
+Churn by Contract Type:
+  Month-to-month: 42.71%
+  One year: 11.27%
+  Two year: 2.83%
+
+Churn by Tenure:
+  0-12 months: 47.68%
+  13-24 months: 28.71%
+  25-48 months: 20.39%
+  49-72 months: 9.51%
+
+Churn by Payment Method:
+  Bank transfer (automatic): 16.71%
+  Credit card (automatic): 15.24%
+  Electronic check: 45.29%
+  Mailed check: 19.11%
+
+Churn by Internet Service:
+  DSL: 18.96%
+  Fiber optic: 41.89%
+  No: 7.40%
+
+--------------------------------------------------------------------------------
+PART 5: CORRELATION INSIGHTS
+--------------------------------------------------------------------------------
+Strong correlation: tenure <-> TotalCharges (r=0.826)
+Strong correlation: TotalPayments <-> TotalPaid (r=0.882)
+
+--------------------------------------------------------------------------------
+PART 6: HIGH-RISK SEGMENTS
+--------------------------------------------------------------------------------
+
+Segment 1: Month-to-month contracts + High monthly charges
+  Size: 2,043 customers (29.0%)
+  Churn Rate: 52.81%
+
+Segment 2: New customers (tenure < 12 months) + No tech support
+  Size: 1,335 customers (19.0%)
+  Churn Rate: 60.97%
+
+Low-Risk Segment: Two-year contracts + Long tenure (>48 months)
+  Size: 1,263 customers (17.9%)
+  Churn Rate: 3.33%
+
+--------------------------------------------------------------------------------
+PART 7: KEY OBSERVATIONS
+--------------------------------------------------------------------------------
+1. Overall churn rate is 26.5% - approximately 1 in 4 customers leave
+2. Month-to-month contracts have highest churn rate (42.7%)
+3. Customers in first 12 months have 47.7% churn - retention critical in first year
+4. Electronic check has highest churn rate (45.3%) among payment methods
+5. Average tenure is 32.4 months - indicates moderate customer lifetime
+
+Hypotheses for Stage 7:
+- Month-to-month contracts drive churn - offer incentives for longer commitments
+- Early-tenure customers at highest risk - improve onboarding and first-year support
+- Payment method may indicate customer engagement level - investigate electronic check users
+- Service add-ons (tech support, security) may reduce churn - test upsell strategies
+
+================================================================================
+END OF REPORT
+================================================================================
+
+Visualizations saved to: outputs/visualizations/
+Total visualizations: 7
+
+Next Steps:
+- Stage 6: Feature Engineering & Metrics Layer
+- Stage 7: Analytical Reasoning (hypothesis testing)
+- Stage 8: Dashboard Development

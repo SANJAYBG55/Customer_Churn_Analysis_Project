@@ -1,0 +1,109 @@
+================================================================================
+DATA CLEANING REPORT
+================================================================================
+
+Generated: 2026-01-06 23:11:51
+Input Dataset: data/processed/centralized_churn_data.csv
+Original Shape: 7043 rows × 31 columns
+
+--------------------------------------------------------------------------------
+STEP 1: FIX TOTALCHARGES DATA TYPE
+--------------------------------------------------------------------------------
+Original data type: object
+Non-numeric values found: 11
+  Invalid values: 11 records
+  Tenure=0 customers: 11
+  Action: Set TotalCharges=0 for tenure=0 customers
+New data type: float64
+
+--------------------------------------------------------------------------------
+STEP 2: HANDLE MISSING VALUES
+--------------------------------------------------------------------------------
+Missing values before: 2102
+
+Columns with missing values: 1
+
+  LastContactDate: 2102 missing (29.85%)
+    Action: Kept as missing (valid business state)
+
+Missing values after: 2102
+Reduction: 0
+
+--------------------------------------------------------------------------------
+STEP 3: CONVERT DATE COLUMNS
+--------------------------------------------------------------------------------
+Date columns found: ['RegistrationDate', 'LastContactDate']
+
+  RegistrationDate:
+    Original type: object
+    New type: datetime64[ns]
+    Invalid dates: 0
+
+  LastContactDate:
+    Original type: object
+    New type: datetime64[ns]
+    Invalid dates: 2102
+
+--------------------------------------------------------------------------------
+STEP 4: STANDARDIZE CATEGORICAL VALUES
+--------------------------------------------------------------------------------
+Categorical columns: 19
+
+Action: Stripped whitespace from all categorical columns
+
+--------------------------------------------------------------------------------
+STEP 5: HANDLE OUTLIERS
+--------------------------------------------------------------------------------
+Method: IQR (Inter-Quartile Range)
+
+  SeniorCitizen:
+    Outliers: 1142 (16.21%)
+    Expected range: [0.00, 0.00]
+    Action: Kept (legitimate variation expected)
+
+  AvgPayment:
+    Outliers: 2 (0.03%)
+    Expected range: [19.89, 149.83]
+    Action: Kept (legitimate variation expected)
+
+  FailedPayments:
+    Outliers: 144 (2.04%)
+    Expected range: [-1.50, 2.50]
+    Action: Kept (legitimate variation expected)
+
+Outliers retained (valid business variation)
+
+--------------------------------------------------------------------------------
+STEP 6: CREATE DATA QUALITY FLAGS
+--------------------------------------------------------------------------------
+TotalCharges_Imputed flag: 11 records
+No_Recent_Contact flag: 2102 records
+
+Purpose: Track which records were modified during cleaning
+
+--------------------------------------------------------------------------------
+STEP 7: VALIDATION CHECKS
+--------------------------------------------------------------------------------
+✅ Row count: 7043 (unchanged)
+✅ No duplicates
+Numeric: 9 columns
+Object: 20 columns
+Datetime: 2 columns
+
+Business Logic Validation:
+  ✅ tenure: All values >= 0
+  ✅ MonthlyCharges: All values > 0
+  ✅ TotalCharges: All values >= 0
+
+Output: data/processed/clean_churn_data.csv
+Final shape: 7043 rows × 33 columns
+
+--------------------------------------------------------------------------------
+BEFORE/AFTER COMPARISON
+--------------------------------------------------------------------------------
+Missing values: 2102 → 2102
+Columns: 31 → 33 (added 2 flags)
+
+================================================================================
+CLEANING COMPLETE
+================================================================================

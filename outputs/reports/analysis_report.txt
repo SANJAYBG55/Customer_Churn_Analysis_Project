@@ -1,0 +1,105 @@
+================================================================================
+ANALYTICAL REASONING REPORT
+================================================================================
+
+Analysis Date: 2026-01-06 23:11:57
+Dataset: data/processed/enriched_churn_data.csv
+Total Customers Analyzed: 7,043
+
+BASELINE METRICS:
+  Overall Churn Rate: 26.54%
+  Churned Customers: 1,869
+  Retained Customers: 5,174
+
+--------------------------------------------------------------------------------
+PART 1: HYPOTHESIS VALIDATION
+--------------------------------------------------------------------------------
+
+Hypothesis 1: Contract Type Impact
+  Month-to-month churn: 42.71%
+  Two-year churn: 2.83%
+  Relative Risk: 15.1x
+  Conclusion: VALIDATED - Contract type is a major churn driver
+
+Hypothesis 2: Tenure Impact
+  New customer churn: 47.44%
+  Loyal customer churn: 9.51%
+  Risk Ratio: 5.0x
+  Conclusion: VALIDATED - First year is critical retention period
+
+Hypothesis 3: Payment Method Impact
+  Highest churn: Electronic check (45.29%)
+  Lowest churn: Credit card (automatic) (15.24%)
+  Difference: 30.0 percentage points
+  Conclusion: VALIDATED - Payment method is churn indicator
+
+Hypothesis 4: Service Adoption Impact
+  Low engagement churn: 41.30%
+  High engagement churn: 8.78%
+  Churn Reduction: 32.5 percentage points
+  Conclusion: VALIDATED - Service adoption reduces churn
+
+--------------------------------------------------------------------------------
+PART 2: SEGMENT ANALYSIS
+--------------------------------------------------------------------------------
+
+HIGH-RISK SEGMENT (Risk_Score >= 2):
+  Size: 2,043 customers (29.0%)
+  Churn Rate: 56.24%
+  Revenue at Risk: $2,410,776.50
+  Avg ARPU: $72.25/month
+
+MEDIUM-RISK SEGMENT (Risk_Score = 1):
+  Size: 2,030 customers (28.8%)
+  Churn Rate: 25.32%
+  Revenue at Risk: $4,893,257.25
+
+LOW-RISK SEGMENT (Risk_Score = 0):
+  Size: 2,970 customers (42.2%)
+  Churn Rate: 6.94%
+
+KEY INSIGHT: High vs Low Risk difference: 49.3 percentage points
+
+VALUE SEGMENT CHURN RATES:
+  High Value: 32.88%
+  Medium Value: 31.02%
+  Low Value: 11.24%
+
+--------------------------------------------------------------------------------
+PART 3: CHURN DRIVERS RANKED BY IMPACT
+--------------------------------------------------------------------------------
+
+Churn Drivers Ranked by Impact:
+
+1. Month-to-month Contract
+   Affected: 3,875 customers
+   Churn Rate: 42.71%
+   Churned: 1,655
+
+2. Low Service Engagement
+   Affected: 2,884 customers
+   Churn Rate: 41.30%
+   Churned: 1,191
+
+3. Electronic Check Payment
+   Affected: 2,365 customers
+   Churn Rate: 45.29%
+   Churned: 1,071
+
+4. New Customer (0-12 months)
+   Affected: 2,186 customers
+   Churn Rate: 47.44%
+   Churned: 1,037
+
+--------------------------------------------------------------------------------
+PART 4: BUSINESS IMPACT
+--------------------------------------------------------------------------------
+
+REVENUE IMPACT:
+  Total CLV Lost: $2,862,926.90
+  Avg CLV per Churned Customer: $1531.80
+  Monthly Revenue Lost: $139,130.85/month
+
+OPPORTUNITY (10% High-Risk Churn Reduction):
+  Customers Saved: ~204
+  Annual Revenue: ~$176,856.32

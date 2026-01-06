@@ -1,0 +1,54 @@
+================================================================================
+EXECUTIVE SUMMARY
+CUSTOMER CHURN ANALYSIS
+================================================================================
+
+Analysis Date: 2026-01-06 23:11:58
+Total Customers Analyzed: 7,043
+
+KEY FINDINGS:
+--------------------------------------------------------------------------------
+
+1. Overall Churn Rate: 26.5% (1,869 customers)
+
+2. Primary Churn Drivers (Validated):
+   • Month-to-month contracts: 42.7% churn (15.1x baseline)
+   • New customers (0-12 months): 47.4% churn (5.0x loyal customers)
+   • Electronic check payment: 45.3% churn
+   • Low service engagement: 41.3% churn
+
+3. High-Risk Segment:
+   • Size: 2,043 customers (29.0% of base)
+   • Churn Rate: 56.2%
+   • Revenue at Risk: $2,410,776.50
+
+4. Business Impact:
+   • Total CLV Lost: $2,862,926.90
+   • Monthly Revenue Lost: $139,130.85/month
+   • Opportunity: Saving 10% of high-risk = $176,856.32 annual revenue
+
+TOP 3 RECOMMENDATIONS:
+--------------------------------------------------------------------------------
+
+1. CONTRACT INCENTIVES (Priority: HIGH)
+   Offer 10-15% discounts for contract upgrades
+   Target: 3,875 month-to-month customers
+   Expected Impact: Reduce churn from 42.7% to ~25%
+
+2. FIRST-YEAR ONBOARDING (Priority: HIGH)
+   Proactive support program for new customers
+   Target: 2,186 customers in first year
+   Expected Impact: Reduce new customer churn from 47.4% to ~35%
+
+3. PAYMENT METHOD MIGRATION (Priority: MEDIUM)
+   Incentivize autopay enrollment
+   Target: 2,365 electronic check users
+   Expected Impact: 30-40% migration, reduced payment failures
+
+NEXT STEPS:
+--------------------------------------------------------------------------------
+• Review full recommendations document for implementation details
+• Prioritize contract incentive program for immediate deployment
+• Design first-year onboarding process with customer success team
+• Implement risk-based monitoring for high-risk segment
+• Track metrics: churn rate by segment, retention rate, revenue saved

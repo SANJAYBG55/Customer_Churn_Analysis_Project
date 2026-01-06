@@ -1,47 +1,29 @@
 # ============================================================================
 # Data Analytics Project - .gitignore
 # Customer Churn Analysis
+# OPTIMIZED FOR INTERVIEW/PORTFOLIO/PLACEMENT
 # ============================================================================
 
 # ===========================
-# Data Files (Too Large / Sensitive)
+# Data Files Strategy
 # ===========================
-# Raw datasets (LARGE FILES - DO NOT COMMIT)
-data/raw/*.csv
-data/raw/*.xlsx
-data/raw/*.xls
-data/raw/*.json
-data/raw/*.txt
+# FOR INTERVIEW: We INCLUDE small datasets, outputs, and visualizations
+# to showcase the complete project without requiring code execution.
+# Only exclude very large files (>50MB) or sensitive credentials.
 
-# Processed datasets (LARGE FILES - DO NOT COMMIT)
-data/processed/*.csv
-data/processed/*.xlsx
-data/processed/*.parquet
-data/processed/*.txt
-
-# Database files (LARGE FILES - DO NOT COMMIT)
+# Database files (can regenerate, and typically large)
 data/database/*.db
 data/database/*.sqlite
 data/database/*.sqlite3
+
+# Exclude only very large data files if any (add specific large files here)
+# Example: data/raw/large_dataset.csv
+# For now, we include all CSV files since telco_churn.csv is < 1MB
 
 # Keep README files in data folders (for documentation)
 !data/raw/README.md
 !data/processed/README.md
 !data/database/README.md
-
-# Reports and outputs (generated files)
-outputs/reports/*.txt
-outputs/reports/*.pdf
-outputs/reports/*.docx
-outputs/reports/*.html
-
-# Visualizations (generated image files)
-outputs/visualizations/*.png
-outputs/visualizations/*.jpg
-outputs/visualizations/*.jpeg
-outputs/visualizations/*.svg
-outputs/visualizations/*.pdf
-outputs/visualizations/*.html
 
 # Keep placeholder files in output folders
 !outputs/reports/.gitkeep
